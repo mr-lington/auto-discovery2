@@ -1,0 +1,12 @@
+variable "profile" {}
+variable "region" {}
+variable "domain" {}
+variable "domain2" {}
+variable "domain-jenkins" {}
+variable "domain-stage" {}
+variable "domain-prod" {}
+variable "ami-ubuntu" {}
+variable "ami-redhat" {}
+variable "instance_type" {}
+variable "instance_type2" {}
+variable "keypair" {}
