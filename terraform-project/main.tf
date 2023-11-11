@@ -9,6 +9,10 @@ module "vpc" {
   az2          = "eu-west-3b"
 }
 
+module "keypair" {
+  source = "./module/keypair"
+}
+
 module "load-balancer" {
   source              = "./module/load-balancer"
   stage-lb-SG         = module.vpc.docker-SG
@@ -40,7 +44,7 @@ module "jenkins" {
   source       = "./module/jenkins"
 ami= var.ami-redhat
 instance-type=var.instance_type2
-keypair= ""
+keypair= module.keypair.out-pub-key
 jenkins-SG= module.vpc.jenkins-SG-ID
 subnet-id= module.vpc.prvsub1
 }
