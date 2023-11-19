@@ -20,9 +20,9 @@ output "prod-zone-id" {
 }
 
 output "jenkins-dns" {
-  value = aws_elb.lb.dns_name
+  value = aws_lb.jenkins-lb.dns_name
 }
 
 output "jenkins-zone-id" {
-  value = aws_elb.lb.zone_id
+  value = aws_lb.jenkins-lb.zone_id
 }
