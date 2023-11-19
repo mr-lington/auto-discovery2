@@ -1,9 +1,7 @@
 variable "ami" {}
 variable "instance-type" {}
 variable "keypair" {}
-variable "jenkins-SG" {}
+variable "nexus-SG" {}
 variable "subnet-id" {}
-variable "nexus-ip" {}
 variable "newrelic-acct-id" {}
 variable "newrelic-user-licence" {}
-variable "subnets-id" {}

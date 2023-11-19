@@ -10,3 +10,7 @@ variable "ami-redhat" {}
 variable "instance_type" {}
 variable "instance_type2" {}
 variable "keypair" {}
+variable "newrelic-id" {}
+variable "newrelic-license-key" {}
+variable "identifier" {}
+variable "db-name" {}
