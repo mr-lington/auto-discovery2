@@ -14,11 +14,15 @@ resource "aws_db_instance" "multi_az_rds" {
   instance_class              = "db.t2.micro"
   # multi_az                    = true
   db_name                     = var.db-name
-  username                    = var.username
-  password                    = var.password
+  # username                    = var.username
+  # password                    = var.password
+  username                    = "petclinic"
+  password                    = "petclinic"
   storage_type                = "gp2"
-  vpc_security_group_ids      = var.RDS-SG-ID
-  publicly_accessible         = false
-  skip_final_snapshot         = true
+  vpc_security_group_ids      = [var.RDS-SG-ID]
+  publicly_accessible         = true
+  apply_immediately = true
+  skip_final_snapshot         = false
   parameter_group_name        = "default.mysql5.7"
+  max_allocated_storage = 100
 }

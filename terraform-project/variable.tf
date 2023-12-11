@@ -14,3 +14,4 @@ variable "newrelic-id" {}
 variable "newrelic-license-key" {}
 variable "identifier" {}
 variable "db-name" {}
+variable "token" {}
