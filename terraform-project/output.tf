@@ -1,51 +1,43 @@
-# output "vpc-id" {
-#   value = aws_vpc.vpc.id
-# }
+output "sonarqube-ip" {
+  value = module.sonarqube-server.sonarqube-ip
+}
 
-# output "prvsub1" {
-#   value = aws_subnet.prv-sn-01.id
-# }
+output "bastion-ip" {
+  value = module.bastion.bastion-ip
+}
 
-# output "prvsub2" {
-#   value = aws_subnet.prv-sn-02.id
-# }
+output "nexus-ip" {
+  value = module.nexus.nexus-ip
+}
 
-# output "pubsub1" {
-#   value = aws_subnet.pub-sn-01.id
-# }
+output "ansible-ip" {
+  value = module.ansible.ansible-ip
+}
 
-# output "pubsub2" {
-#   value = aws_subnet.pub-sn-02.id
-# }
+output "jenkins-ip" {
+  value = module.jenkins.jenkins-ip
+}
 
-# output "pubsubs1-2-id" {
-#   value = [aws_subnet.pub-sn-01.id, aws_subnet.pub-sn-02.id]
-# }
+output "jenkins-lb-dns" {
+  value = module.load-balancer.jenkins-dns
+}
 
-# output "ansible-SG-ID" {
-#   value = aws_security_group.Bastion-Ansible_SG.id
-# }
+output "prod-lb-dns" {
+  value = module.load-balancer.prod-lb-dns
+}
 
-# output "docker-SG" {
-#   value = aws_security_group.Docker_SG.id
-# }
+output "stage-lb-dns" {
+  value = module.load-balancer.stage-lb-dns
+}
 
-# output "bastion-SG-ID" {
-#   value = aws_security_group.Bastion-Ansible_SG.id
-# }
+output "db-endpoint" {
+  value = module.multi_az_rds.db-endpoint
+}
 
-# output "jenkins-SG-ID" {
-#   value = aws_security_group.Jenkins_SG.id
-# }
+# # output "certificate_arn" {
+# #   value = module.ssl-certificate.certificate_arn
+# # }
 
-# output "sonarqube-SG-ID" {
-#   value = aws_security_group.Sonarqube_SG.id
-# }
-
-# output "nexus-SG-ID" {
-#   value = aws_security_group.Nexus_SG.id
-# }
-
-# output "rds-SG-ID" {
-#   value = aws_security_group.MYSQL_RDS_SG.id
+# output "route53-server" {
+#   value = module.ROUTE53.route53_dns-name
 # }

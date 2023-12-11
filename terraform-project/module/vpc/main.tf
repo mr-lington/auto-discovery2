@@ -5,6 +5,8 @@ locals {
 resource "aws_vpc" "vpc" {
   cidr_block       = "10.0.0.0/16"
   instance_tenancy = "default"
+  enable_dns_hostnames = true
+  
   tags = {
     Name = "${local.name}-vpc"
   }
@@ -201,6 +203,15 @@ resource "aws_security_group" "Jenkins_SG" {
     protocol    = "tcp"
     cidr_blocks = ["0.0.0.0/0"]
   }
+
+   ingress {
+    description = "Allow proxy access"
+    from_port   = 443
+    to_port     = 443
+    protocol    = "tcp"
+    cidr_blocks = ["0.0.0.0/0"]
+  }
+
   egress {
     from_port   = 0
     to_port     = 0
@@ -290,8 +301,17 @@ resource "aws_security_group" "MYSQL_RDS_SG" {
     from_port   = 3306
     to_port     = 3306
     protocol    = "tcp"
-    cidr_blocks = ["0.0.0.0/0"]
+    security_groups = [aws_security_group.Docker_SG.id]
   }
+
+  ingress {
+    description = "Allow MYSQL access"
+    from_port   = 3306
+    to_port     = 3306
+    protocol    = "tcp"
+    security_groups = [aws_security_group.Bastion-Ansible_SG.id]
+  }
+
   egress {
     from_port   = 0
     to_port     = 0

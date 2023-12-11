@@ -19,9 +19,9 @@ module "load-balancer" {
   prod-lb-SG      = module.vpc.docker-SG
   jenkins-lb-SG   = module.vpc.jenkins-SG-ID
   vpc-id          = module.vpc.vpc-id
-  subnets         = [module.vpc.prvsub1, module.vpc.prvsub2]
+  subnets         = [module.vpc.pubsub1, module.vpc.pubsub2]
   certificate-arn = module.route53.petclinic-cert
-  # jenkins-instance-id = module.jenkins.jenkins-id
+  jenkins-instance-id = module.jenkins.jenkins-id
   # subnets-id          = [module.vpc.pubsub1,module.vpc.pubsub2]
   # jenkins-SG          = module.vpc.jenkins-SG-ID
 }
@@ -41,23 +41,32 @@ module "route53" {
   jenkins-lb-zone-id  = module.load-balancer.jenkins-zone-id
 }
 
-# module "ansible" {
-#   source                = "./module/ansible"
-#  ami= var.ami-redhat
-#  instance-type= var.instance_type2
-#  ansible-SG= module.vpc.ansible-SG-ID
-#  subnet-id= module.vpc.pubsub1
-#  keypair=module.keypair.out-pub-key
-
-# }
+module "ansible" {
+  source                = "./module/ansible"
+  ami                   = var.ami-redhat
+  instance-type         = var.instance_type2
+  ansible-SG            = module.vpc.ansible-SG-ID
+  subnet-id             = module.vpc.pubsub1
+  keypair               = module.keypair.out-pub-key
+  prod-bashscript       = "${path.root}/module/ansible/prod-bashscript.sh"
+  prod-playbook         = "${path.root}/module/ansible/prod-playbook.yml"
+  stage-bashscript      = "${path.root}/module/ansible/stage-bashscript.sh"
+  stage-playbook        = "${path.root}/module/ansible/stage-playbook.yml"
+  newrelic-acct-id      = var.newrelic-id
+  newrelic-user-licence = var.newrelic-license-key
+  pri-keypair           = module.keypair.out-priv-key
+  nexus-ip              = module.nexus.nexus-ip
+}
 
 module "bastion" {
-  source        = "./module/bastion-host"
-  ami           = var.ami-redhat
-  instance-type = var.instance_type
-  bastion-SG    = module.vpc.bastion-SG-ID
-  keypair       = module.keypair.out-pub-key
-  subnet-id     = module.vpc.pubsub2
+  source                = "./module/bastion-host"
+  ami                   = var.ami-redhat
+  instance-type         = var.instance_type
+  bastion-SG            = module.vpc.bastion-SG-ID
+  keypair               = module.keypair.out-pub-key
+  subnet-id             = module.vpc.pubsub2
+  newrelic-acct-id      = var.newrelic-id
+  newrelic-user-licence = var.newrelic-license-key
 }
 
 module "jenkins" {
@@ -84,23 +93,25 @@ module "nexus" {
   newrelic-user-licence = var.newrelic-license-key
 }
 
-# module "multi_az_rds" {
-#   source      = "./module/rds"
-#   prv-subnets = [module.vpc.prvsub1, module.vpc.prvsub1]
-#   username    = data.vault_generic_secret.database.data["username"]
-#   password    = data.vault_generic_secret.database.data["password"]
-#   RDS-SG-ID   = [module.vpc.rds-SG-ID]
-#   identifier  = var.identifier
-#   db-name     = var.db-name
-# }
+module "multi_az_rds" {
+  source      = "./module/rds"
+  prv-subnets = [module.vpc.prvsub1, module.vpc.prvsub2]
+  username    = data.vault_generic_secret.database.data["username"]
+  password    = data.vault_generic_secret.database.data["password"]
+  RDS-SG-ID   = module.vpc.rds-SG-ID
+  identifier  = var.identifier
+  db-name     = var.db-name
+}
 
 module "sonarqube-server" {
-  source        = "./module/sonarqube"
-  ami           = var.ami-ubuntu
-  instance-type = var.instance_type2
-  subnet-id     = module.vpc.pubsub1
-  sonarqube-sg  = module.vpc.sonarqube-SG-ID
-  keypair       = module.keypair.out-pub-key
+  source                = "./module/sonarqube"
+  ami                   = var.ami-ubuntu
+  instance-type         = var.instance_type2
+  subnet-id             = module.vpc.pubsub1
+  sonarqube-sg          = module.vpc.sonarqube-SG-ID
+  keypair               = module.keypair.out-pub-key
+  newrelic-acct-id      = var.newrelic-id
+  newrelic-user-licence = var.newrelic-license-key
 }
 
 module "asg" {

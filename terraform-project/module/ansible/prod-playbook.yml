@@ -1,0 +1,22 @@
+---
+- name: Docker prod webserver
+  hosts: webservers
+  become: true
+  vars_files:
+   - ansible_vars_file.yml
+  tasks:
+  - name: stop running container
+    command: docker stop AppContainer
+    ignore_errors: yes
+  - name: remove stopped container
+    command: docker rm AppContainer
+    ignore_errors: yes
+  - name: remove docker image stored in nexus repo
+    command: docker rmi \"{{ NEXUS_IP }}\"/myapp:latest
+    ignore_errors: yes
+  - name: Pull docker image from nexus repo and create a container
+    shell: |
+      sudo su -c \"docker login --username=admin password=admin123 {{ NEXUS_IP }}\" ec2-user
+      sudo su -c \"docker pull \"{{ NEXUS_IP }}\"/myapp:latest\" ec2-user
+      sudo su -c \"docker run -it -d --name AppContainer -p 8080:8080 \"{{ NEXUS_IP }}\"/myapp:latest\" ec2-user
+

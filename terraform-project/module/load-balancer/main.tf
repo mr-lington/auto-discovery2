@@ -193,3 +193,9 @@ resource "aws_lb_target_group" "jenkins_target_group" {
     unhealthy_threshold = 5
   }
 }
+
+resource "aws_lb_target_group_attachment" "jenkins-tg-attachement" {
+  target_group_arn = aws_lb_target_group.jenkins_target_group.arn
+  target_id        = var.jenkins-instance-id
+  port             = 8080
+}
