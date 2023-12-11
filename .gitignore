@@ -3,4 +3,6 @@
 terraform.*
 *.DS_Store
 resource.tfvars
-
+terraform.tfstate
+terraform.tfstate.backup
+vault.tfvars
