@@ -1,1 +1,1 @@
-# PetClinic-app4devops
+# auto-discovery2
