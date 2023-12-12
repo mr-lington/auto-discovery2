@@ -14,13 +14,13 @@ module "keypair" {
 }
 
 module "load-balancer" {
-  source          = "./module/load-balancer"
-  stage-lb-SG     = module.vpc.docker-SG
-  prod-lb-SG      = module.vpc.docker-SG
-  jenkins-lb-SG   = module.vpc.jenkins-SG-ID
-  vpc-id          = module.vpc.vpc-id
-  subnets         = [module.vpc.pubsub1, module.vpc.pubsub2]
-  certificate-arn = module.route53.petclinic-cert
+  source              = "./module/load-balancer"
+  stage-lb-SG         = module.vpc.docker-SG
+  prod-lb-SG          = module.vpc.docker-SG
+  jenkins-lb-SG       = module.vpc.jenkins-SG-ID
+  vpc-id              = module.vpc.vpc-id
+  subnets             = [module.vpc.pubsub1, module.vpc.pubsub2]
+  certificate-arn     = module.route53.petclinic-cert
   jenkins-instance-id = module.jenkins.jenkins-id
   # subnets-id          = [module.vpc.pubsub1,module.vpc.pubsub2]
   # jenkins-SG          = module.vpc.jenkins-SG-ID

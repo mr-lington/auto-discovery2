@@ -2,9 +2,9 @@
 provider "aws" {
   # region  = var.region  
   # profile = var.profile 
-   region = data.vault_generic_secret.aws-cred.data["region"]
-   access_key = data.vault_generic_secret.aws-cred.data["aws_access_key_id"]
-   secret_key = data.vault_generic_secret.aws-cred.data["aws_secret_access_key"]
+  region     = data.vault_generic_secret.aws-cred.data["region"]
+  access_key = data.vault_generic_secret.aws-cred.data["aws_access_key_id"]
+  secret_key = data.vault_generic_secret.aws-cred.data["aws_secret_access_key"]
 }
 
 provider "vault" {
