@@ -27,7 +27,7 @@ wget https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
 sudo yum install epel-release-latest-7.noarch.rpm -y
 sudo yum update -y
 sudo yum install python python-devel python-pip ansible -y
-sudo -E pip3 install pexpect
+
 
 # copying files from local machines into Ansible server
 sudo echo "${file(var.prod-bashscript)}" >> /etc/ansible/prod-bashscript.sh
