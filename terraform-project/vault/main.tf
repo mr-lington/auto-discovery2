@@ -94,10 +94,12 @@ resource "aws_instance" "vault" {
 
 
   user_data = templatefile("./vault-script.sh", {
-    region  = var.region,
-    kms_key = aws_kms_key.vault.id,
-    domain  = var.domain-name,
-    email   = var.email
+    region               = var.region,
+    kms_key              = aws_kms_key.vault.id,
+    domain               = var.domain-name,
+    email                = var.email,
+    newrelic-id          = var.newrelic-id,
+    newrelic-license-key = var.newrelic-license-key
   })
 
   tags = {

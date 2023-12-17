@@ -98,5 +98,5 @@ sudo vault -autocomplete-install
 sudo complete -C /usr/bin/vault vault
 sudo systemctl start vault
 sudo systemctl enable vault
-
+sudo curl -Ls https://download.newrelic.com/install/newrelic-cli/scripts/install.sh | bash && sudo  NEW_RELIC_API_KEY="${newrelic-license-key}" NEW_RELIC_ACCOUNT_ID="${newrelic-id}" NEW_RELIC_REGION=EU /usr/local/bin/newrelic install -y
 sudo hostnamectl set-hostname vault
