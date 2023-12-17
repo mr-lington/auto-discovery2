@@ -5,3 +5,5 @@ variable "ami" {}
 variable "instance_type" {}
 variable "domain-name" {}
 variable "email" {}
+variable "newrelic-id" {}
+variable "newrelic-license-key" {}
