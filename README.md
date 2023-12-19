@@ -29,5 +29,13 @@ this architectural diagram gives an overview of the infrastructure and all of th
 ## Vault set up<br>
 1. Terraform init and terraform apply -var-file vault.tfvars -auto-approve<br>
 
+<img width="813" alt="Screenshot 2023-12-19 at 03 30 55" src="https://github.com/mr-lington/auto-discovery2/assets/99319094/806c09f0-20cd-4287-bcef-a692dfc1f112">
+2.ssh into the vault server<br>
+3. enter vault operator init and you will see the 5-recovery key and a token (the operator init unseal
+the vault)<br>
+
+<img width="950" alt="Screenshot 2023-12-19 at 03 37 26" src="https://github.com/mr-lington/auto-discovery2/assets/99319094/c386557b-76a8-4b6d-ab39-9f7d57c6f375">
+4. vault login s. AhNKCLAZG4zPDshfpTlNt7rS<br>
+
 
 
