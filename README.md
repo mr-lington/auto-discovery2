@@ -42,11 +42,49 @@ The above command enables you to login and start using vault server, you can eve
 
 <img width="952" alt="Screenshot 2023-12-19 at 03 43 24" src="https://github.com/mr-lington/auto-discovery2/assets/99319094/3bf3a704-fb67-458b-9e07-0a323a28756f"><br>
 You can now see the server status is green which means its working<br>
-4. vault secrets enable -path=secrett/ kv ==== to enable our key-value (KV) secrets engine at secrett<br>
+5. vault secrets enable -path=secrett/ kv ==== to enable our key-value (KV) secrets engine at secrett<br>
 
 <img width="941" alt="Screenshot 2023-12-19 at 03 46 14" src="https://github.com/mr-lington/auto-discovery2/assets/99319094/a0398613-505d-4a24-9507-798d1365cebf"><br>
 
 <img width="952" alt="Screenshot 2023-12-19 at 03 46 59" src="https://github.com/mr-lington/auto-discovery2/assets/99319094/5de0a8eb-e43a-459d-8d23-e58768590177"><br>
+6. How we can start putting our secret credentials not to be exposed to the public<br>
+
+<img width="969" alt="Screenshot 2023-12-19 at 03 56 21" src="https://github.com/mr-lington/auto-discovery2/assets/99319094/37085f2c-5325-43cc-b486-fbf59218fbb1"><br>
+
+<img width="972" alt="Screenshot 2023-12-19 at 03 57 27" src="https://github.com/mr-lington/auto-discovery2/assets/99319094/c2cea483-8225-4fb3-ae4d-18691a6a7549"><br>
+The above pictures show viewing the secrets stored in vault from UI<br>
+7. To view your secret from the CLI
+
+<img width="975" alt="Screenshot 2023-12-19 at 04 00 49" src="https://github.com/mr-lington/auto-discovery2/assets/99319094/be55edb3-fba9-4805-b928-9b2318a64d2d"><br>
+## CONNECT RDS WORK BENCH<br>
+MyQSL WorkBench is integrated with the application so that we can have a vitual view of our database and also we want a database that is persistent. we deployed it in multi-az.<br>
+### below are the steps to set it up<br>
+1. Add your local ip address to your bastion host SG<br>
+
+<img width="972" alt="Screenshot 2023-12-19 at 04 08 27" src="https://github.com/mr-lington/auto-discovery2/assets/99319094/f5204b44-1e0b-46ba-8c9f-b09ad3b8faeb"><br>
+2. Set up your work bench using ssh connection<br>
+3. Connection method should be Standard TCP/IP over SSH and fill all the necessary vaules as shown in the image below.<br>
+
+<img width="947" alt="Screenshot 2023-12-19 at 04 09 45" src="https://github.com/mr-lington/auto-discovery2/assets/99319094/57aba6d6-03e3-428e-b79e-57f8120c6d09"><br>
+
+<img width="713" alt="Screenshot 2023-12-19 at 04 13 26" src="https://github.com/mr-lington/auto-discovery2/assets/99319094/748bba8b-c4af-47c2-afee-bf05a26f50c7"><br>
+4. Create your database ( create the petclinic)<br>
+
+<img width="777" alt="Screenshot 2023-12-19 at 04 15 07" src="https://github.com/mr-lington/auto-discovery2/assets/99319094/dfbf9b46-a88a-4ccc-8122-12a4f00b1b8f"><br>
+5. Enter user Pet-clinic to enter the petclinic<br>
+
+<img width="778" alt="Screenshot 2023-12-19 at 04 17 07" src="https://github.com/mr-lington/auto-discovery2/assets/99319094/164473ff-f3f7-467e-a0d8-66df989950c2"><br>
+6. Create table<br>
+
+<img width="738" alt="Screenshot 2023-12-19 at 04 17 59" src="https://github.com/mr-lington/auto-discovery2/assets/99319094/a3ef2652-bc79-419e-bfb1-755ea6f3b004"><br>
+7. Viewing the table<br>
+<img width="781" alt="Screenshot 2023-12-19 at 04 19 23" src="https://github.com/mr-lington/auto-discovery2/assets/99319094/04894f41-1c03-4d48-9dc9-3f63a2861fec"><br>
+### Now connect your database to the application we want to deploy<br>
+1. Go to my application.properties<br>
+2. Update the datasource url with our database endpoint<br>
+3. That the use name and password of our database<br>
+Note : without the above step we can’t connect our database to our application
+
 
 
 
