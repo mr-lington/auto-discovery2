@@ -43,6 +43,7 @@ The above command enables you to login and start using vault server, you can eve
 <img width="952" alt="Screenshot 2023-12-19 at 03 43 24" src="https://github.com/mr-lington/auto-discovery2/assets/99319094/3bf3a704-fb67-458b-9e07-0a323a28756f">
 You can now see the server status is green which means its working<br>
 4. vault secrets enable -path=secrett/ kv ==== to enable our key-value (KV) secrets engine at secrett<br>
+
 <img width="941" alt="Screenshot 2023-12-19 at 03 46 14" src="https://github.com/mr-lington/auto-discovery2/assets/99319094/a0398613-505d-4a24-9507-798d1365cebf">
 
 <img width="952" alt="Screenshot 2023-12-19 at 03 46 59" src="https://github.com/mr-lington/auto-discovery2/assets/99319094/5de0a8eb-e43a-459d-8d23-e58768590177">
