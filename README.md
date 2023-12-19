@@ -84,6 +84,38 @@ MyQSL WorkBench is integrated with the application so that we can have a vitual 
 2. Update the datasource url with our database endpoint<br>
 3. That the use name and password of our database<br>
 Note : without the above step we can’t connect our database to our application
+## Setting up Sonarqube<br>
+1. Enter first time default username and password ADMIM<br>
+
+<img width="726" alt="Screenshot 2023-12-19 at 04 25 22" src="https://github.com/mr-lington/auto-discovery2/assets/99319094/e812245a-6518-42f6-97e9-c9f5c3a24408"><br>
+2. Change password from the default one
+
+<img width="736" alt="Screenshot 2023-12-19 at 04 26 27" src="https://github.com/mr-lington/auto-discovery2/assets/99319094/c180a2d4-9a05-4046-bde4-8b15a70f485a"><br>
+
+3. Generate sonarqube token: this token will be used as our secret text when setting up sonarqube credentials on jenkins<br>
+
+<img width="735" alt="Screenshot 2023-12-19 at 04 33 10" src="https://github.com/mr-lington/auto-discovery2/assets/99319094/98e28809-133b-4611-af03-fb1efc5cf301"><br>
+4. create webhook
+
+<img width="673" alt="Screenshot 2023-12-19 at 04 35 26" src="https://github.com/mr-lington/auto-discovery2/assets/99319094/131ebfeb-9ec3-40fe-a0e9-9692bed6b9af"><br>
+## Setting up nexus<br>
+This is used for docker image artifactory<br>
+1. Signin with admin which is the default username and CAT the path /app/sonatype-work/nexus3/admin.password on the nexus server to get default password<br>
+
+<img width="739" alt="Screenshot 2023-12-19 at 04 43 29" src="https://github.com/mr-lington/auto-discovery2/assets/99319094/5eabae8c-56c5-4dd1-9db1-b13b5b995569"><br>
+2. choose a new password for the admin user<br>
+<img width="726" alt="Screenshot 2023-12-19 at 04 44 55" src="https://github.com/mr-lington/auto-discovery2/assets/99319094/3547d772-52b4-45ae-ad0f-b5219618a5e7"><br>
+
+<img width="730" alt="Screenshot 2023-12-19 at 04 45 26" src="https://github.com/mr-lington/auto-discovery2/assets/99319094/6427219c-f3ef-47ca-a6af-bc6a3745808e"><br>
+3. Create docker repo in nexus: this is where we will save all our docker image to, this can be done under REPOSITORIES panel at the left top corner of UGI of nexus
+
+<img width="730" alt="Screenshot 2023-12-19 at 04 46 31" src="https://github.com/mr-lington/auto-discovery2/assets/99319094/63bdf76f-5001-4fdb-94fa-e1450dc899a2"><br>
+Note: you can only see your image after you have built and push to the repo<br>
+<img width="749" alt="Screenshot 2023-12-19 at 04 47 28" src="https://github.com/mr-lington/auto-discovery2/assets/99319094/d04e0b40-7601-452a-8049-207636a17258"><br>
+4. Go to SECURITY and the REALMS, click on DOCKER BEARER TOKEN REALM and click on the Botton next to it to move it to active on right hand panel and the SAVE<br>
+
+<img width="721" alt="Screenshot 2023-12-19 at 04 48 46" src="https://github.com/mr-lington/auto-discovery2/assets/99319094/ff3e2d96-47e9-4140-86ba-d83194fcde26"><br>
+## Setting up Jenkins
 
 
 
