@@ -5,8 +5,8 @@ This project is the deploymet of a highly available, highly scalable, highly sec
 Maven
 
 ## prerequisites
- <p>First you have to install aws cli on your local machine.<br>
- secord you need a linux machine
+ <p>1.First you have to install aws cli on your local machine.<br>
+ <p>2.Secord you need a linux machine.<br>
 
 tech-stack
 docker
