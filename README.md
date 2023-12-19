@@ -19,7 +19,7 @@ hashicorp vault<br>
 new relic<br>
 MySQL Workbench<br>
 
-ARCHITECTURAL DIAGRAM 
+## ARCHITECTURAL DIAGRAM<br>
 this architectural diagram gives an overview of the infrastructure and all of the techstack used.
 
 <img width="943" alt="lington-auto-discovery" src="https://github.com/mr-lington/auto-discovery2/assets/99319094/a5365d40-35f2-4879-8719-c5b04cfd6164">
