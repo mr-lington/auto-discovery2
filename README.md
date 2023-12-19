@@ -132,7 +132,8 @@ Note: you can only see your image after you have built and push to the repo<br>
 <img width="651" alt="Screenshot 2023-12-19 at 19 56 03" src="https://github.com/mr-lington/auto-discovery2/assets/99319094/d8055f11-5bba-474d-a3af-00d46fa3dd8f"><br>
 <img width="634" alt="Screenshot 2023-12-19 at 19 56 45" src="https://github.com/mr-lington/auto-discovery2/assets/99319094/6d34dcbb-1b06-4d90-9ce1-62f2dc284994"><br>
 <img width="625" alt="Screenshot 2023-12-19 at 19 58 12" src="https://github.com/mr-lington/auto-discovery2/assets/99319094/c7b2a2ab-3efe-429a-a293-07d696604ac4"><br>
-5. Configure tools, tools are what you install in jenkins that will integrate with jenkins<br> click on manage jenkins, click on tools<br>
+5. ### Configure tools<br> 
+Tools are what you install in jenkins that will integrate with jenkins<br> click on manage jenkins, click on tools<br>
 
 
 <img width="649" alt="Screenshot 2023-12-19 at 20 04 24" src="https://github.com/mr-lington/auto-discovery2/assets/99319094/35017cd2-d219-46f5-9b42-86cfa4b32b18"><br>
