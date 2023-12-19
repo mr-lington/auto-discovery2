@@ -4,11 +4,11 @@ This project is the deploymet of a highly available, highly scalable, highly sec
 ## Built with
 Maven
 
-## prerequisites
+## Prerequisites
  <p>1. First you have to install aws cli on your local machine.<br>
  2. Secord you need a linux machine.<br>
 
-## tech-stack
+## Tech-Stack
 docker<br>
 jenkins<br>
 terraform<br>
@@ -21,7 +21,5 @@ MySQL Workbench<br>
 
 ## ARCHITECTURAL DIAGRAM<br>
 this architectural diagram gives an overview of the infrastructure and all of the techstack used.
-
-
 
 <img width="1121" alt="Screenshot 2023-12-19 at 03 13 18" src="https://github.com/mr-lington/auto-discovery2/assets/99319094/5c1896f6-f99c-4a91-8adb-934c545e29cd">
