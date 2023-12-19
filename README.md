@@ -23,3 +23,11 @@ MySQL Workbench<br>
 this architectural diagram gives an overview of the infrastructure and all of the techstack used.
 
 <img width="1121" alt="Screenshot 2023-12-19 at 03 13 18" src="https://github.com/mr-lington/auto-discovery2/assets/99319094/5c1896f6-f99c-4a91-8adb-934c545e29cd">
+
+## SETTING UP THE INFRASTRUCTURE<br>
+### NOTE: this project is deployed using the terraform tfvars that is not included in this project, if you want it, you can request for it by messaging me on linkedin like i will put at the end of this project
+## Vault set up<br>
+1. Terraform init and terraform apply -var-file vault.tfvars -auto-approve<br>
+
+
+
