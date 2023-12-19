@@ -6,7 +6,7 @@ Maven
 
 ## prerequisites
  <p>1. First you have to install aws cli on your local machine.<br>
- 2. Secord you need a linux machine.<br>
+ 2. Secord you need a linux machine.
 
 tech-stack
 docker
