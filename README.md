@@ -37,7 +37,7 @@ the vault)<br>
 <img width="950" alt="Screenshot 2023-12-19 at 03 37 26" src="https://github.com/mr-lington/auto-discovery2/assets/99319094/c386557b-76a8-4b6d-ab39-9f7d57c6f375"><br>
 4. vault login s. AhNKCLAZG4zPDshfpTlNt7rS<br>
 
-<img width="951" alt="Screenshot 2023-12-19 at 03 40 37" src="https://github.com/mr-lington/auto-discovery2/assets/99319094/02db1abe-e441-459d-b803-f69c45c99007">
+<img width="951" alt="Screenshot 2023-12-19 at 03 40 37" src="https://github.com/mr-lington/auto-discovery2/assets/99319094/02db1abe-e441-459d-b803-f69c45c99007"><br>
 The above command enables you to login and start using vault server, you can even view it now from the UI<br>
 
 <img width="952" alt="Screenshot 2023-12-19 at 03 43 24" src="https://github.com/mr-lington/auto-discovery2/assets/99319094/3bf3a704-fb67-458b-9e07-0a323a28756f"><br>
