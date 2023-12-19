@@ -4,10 +4,8 @@ This project is the deploymet of a highly available, highly scalable, highly sec
 ## Built with
 Maven
 
-### prerequisites
-
-
- first you have to install aws cli on your local machine
+## prerequisites
+ <p>First you have to install aws cli on your local machine.<br>
  secord you need a linux machine
 
 tech-stack
