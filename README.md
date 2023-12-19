@@ -126,13 +126,14 @@ Note: you can only see your image after you have built and push to the repo<br>
 <img width="667" alt="Screenshot 2023-12-19 at 19 51 02" src="https://github.com/mr-lington/auto-discovery2/assets/99319094/e08b3415-5b60-431b-93ee-ce94c5a1037b"><br>
 <img width="674" alt="Screenshot 2023-12-19 at 19 51 31" src="https://github.com/mr-lington/auto-discovery2/assets/99319094/5fc33c8d-1663-46f2-9252-69aab2d925a4"><br>
 
-4. configure the credentials, click on manage jenkins, click on credentials and follow the screenshoots below to configure the credentials for all the techstacks that will integrate with jenkins<br>
+### configure the credentials<br>
+Click on manage jenkins, click on credentials and follow the screenshoots below to configure the credentials for all the techstacks that will integrate with jenkins<br>
 <img width="621" alt="Screenshot 2023-12-19 at 19 55 11" src="https://github.com/mr-lington/auto-discovery2/assets/99319094/9173828a-63d9-45e9-96be-2dfe343671da"><br>
 
 <img width="651" alt="Screenshot 2023-12-19 at 19 56 03" src="https://github.com/mr-lington/auto-discovery2/assets/99319094/d8055f11-5bba-474d-a3af-00d46fa3dd8f"><br>
 <img width="634" alt="Screenshot 2023-12-19 at 19 56 45" src="https://github.com/mr-lington/auto-discovery2/assets/99319094/6d34dcbb-1b06-4d90-9ce1-62f2dc284994"><br>
 <img width="625" alt="Screenshot 2023-12-19 at 19 58 12" src="https://github.com/mr-lington/auto-discovery2/assets/99319094/c7b2a2ab-3efe-429a-a293-07d696604ac4"><br>
-5. ### Configure tools<br> 
+### Configure tools<br> 
 Tools are what you install in jenkins that will integrate with jenkins<br> click on manage jenkins, click on tools<br>
 
 
@@ -144,6 +145,52 @@ This is where we configure the servers that will connect with jenkins,slack and 
 
 
 <img width="595" alt="Screenshot 2023-12-19 at 20 08 23" src="https://github.com/mr-lington/auto-discovery2/assets/99319094/2618d6f8-573e-468e-b3c9-6f3183859628"><br>
+## CONFIGURE GITHUB WEBHOOK<br>
+1. copy the API token generated in Jenkins and you it to create a webhook in github<br>
+<img width="619" alt="Screenshot 2023-12-19 at 20 20 29" src="https://github.com/mr-lington/auto-discovery2/assets/99319094/c5e13228-216b-40d6-914c-53cc1ecf338e"><br>
+2. Click on SETTINGS and WEBHOOK<br>
+<img width="578" alt="Screenshot 2023-12-19 at 20 22 16" src="https://github.com/mr-lington/auto-discovery2/assets/99319094/d00e4266-2b7d-44b6-810a-4f0524466e7f"><br>
+### Create Jenkins pipeline<br>
+
+1. Enter the name you want to name the profile(PETCLINIC)<br>
+<img width="556" alt="Screenshot 2023-12-19 at 20 24 29" src="https://github.com/mr-lington/auto-discovery2/assets/99319094/5720d8c1-3830-488d-88a6-d8b23bc066b1"><br>
+
+2. under Triggers tick GITHUB hook trigger for GITScm polling because we want or application to automatically trigger a build in our jenkins pipeline when ever there is a push to the application repository on github<br>
+<img width="668" alt="Screenshot 2023-12-19 at 20 25 37" src="https://github.com/mr-lington/auto-discovery2/assets/99319094/4939e7ec-220a-4adb-a84d-f2ffd024dd09"><br>
+<img width="695" alt="Screenshot 2023-12-19 at 20 26 41" src="https://github.com/mr-lington/auto-discovery2/assets/99319094/b607666d-0e3f-4a8c-ab27-4e29c856b71f"><br>
+
+3. pipeline complete build trigger<br>
+<img width="654" alt="Screenshot 2023-12-19 at 20 30 17" src="https://github.com/mr-lington/auto-discovery2/assets/99319094/3573036c-b27e-4c3a-87a1-17ff882ccc42"><br>
+
+Accessing application with stage domain name<br>
+<img width="611" alt="Screenshot 2023-12-19 at 20 32 09" src="https://github.com/mr-lington/auto-discovery2/assets/99319094/77e4b3df-96b6-410f-867a-187aa1e3bf75"><br>
+
+Accessing application with production domain name<br>
+<img width="598" alt="Screenshot 2023-12-19 at 20 33 37" src="https://github.com/mr-lington/auto-discovery2/assets/99319094/65469815-eb4d-4063-94f1-e4e999f29758"><br>
+
+Accessing our application with Stage and production ALB<br>
+<img width="860" alt="Screenshot 2023-12-19 at 20 38 59" src="https://github.com/mr-lington/auto-discovery2/assets/99319094/09cb18c1-caa5-444c-b812-01fc43bb721f"><br>
+<img width="868" alt="Screenshot 2023-12-19 at 20 39 36" src="https://github.com/mr-lington/auto-discovery2/assets/99319094/b9b5296d-bd1b-498b-9b53-be727d28e97b"><br>
+
+Adding new pet to the clinic database<br>
+<img width="866" alt="Screenshot 2023-12-19 at 20 44 03" src="https://github.com/mr-lington/auto-discovery2/assets/99319094/1606354b-1934-4b21-b219-2ea73a5d1601"><br>
+
+Now we can see that the data is persistent from our MySql workbench<br>
+<img width="875" alt="Screenshot 2023-12-19 at 20 49 05" src="https://github.com/mr-lington/auto-discovery2/assets/99319094/341b9498-3b81-46ad-9d69-4d7457416ec8"><br>
+
+### Caring out application upgrade from github<br>
+<img width="889" alt="Screenshot 2023-12-19 at 20 51 34" src="https://github.com/mr-lington/auto-discovery2/assets/99319094/089889a0-f094-4925-8db0-272da0b112ad"><br>
+
+Original welcome.html file before application upgrade
+
+
+
+
+
+
+
+
+
 
 
 
