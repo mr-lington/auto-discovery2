@@ -8,16 +8,16 @@ Maven
  <p>1. First you have to install aws cli on your local machine.<br>
  2. Secord you need a linux machine.<br>
 
-tech-stack
-docker
-jenkins
-terraform
-ansible
-sonarqube
-nexus
-hashicorp vault
-new relic
-MySQL Workbench
+## tech-stack
+docker<br>
+jenkins<br>
+terraform<br>
+ansible<br>
+sonarqube<br>
+nexus<br>
+hashicorp vault<br>
+new relic<br>
+MySQL Workbench<br>
 
 ARCHITECTURAL DIAGRAM 
 this architectural diagram gives an overview of the infrastructure and all of the techstack used.
