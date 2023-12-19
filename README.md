@@ -179,9 +179,62 @@ Now we can see that the data is persistent from our MySql workbench<br>
 <img width="875" alt="Screenshot 2023-12-19 at 20 49 05" src="https://github.com/mr-lington/auto-discovery2/assets/99319094/341b9498-3b81-46ad-9d69-4d7457416ec8"><br>
 
 ### Caring out application upgrade from github<br>
-<img width="889" alt="Screenshot 2023-12-19 at 20 51 34" src="https://github.com/mr-lington/auto-discovery2/assets/99319094/089889a0-f094-4925-8db0-272da0b112ad"><br>
+<img width="902" alt="Screenshot 2023-12-19 at 21 08 15" src="https://github.com/mr-lington/auto-discovery2/assets/99319094/0dc8606b-ff13-4b01-99b2-7b9d4ec6ef2e"><br>
 
-Original welcome.html file before application upgrade
+Original welcome.html file before application upgrade<br>
+<img width="909" alt="Screenshot 2023-12-19 at 21 11 14" src="https://github.com/mr-lington/auto-discovery2/assets/99319094/95c29de7-b3f7-46bc-8c04-0df4012b9927"><br>
+
+welcome.html file after application upgrade<br>
+<img width="896" alt="Screenshot 2023-12-19 at 21 13 53" src="https://github.com/mr-lington/auto-discovery2/assets/99319094/dd7a8565-e3ea-4ff0-ba4f-e5defc71034f"><br>
+
+The following 4 images shows accessing the application from DNS and ALB after application upgrade<br>
+<img width="861" alt="Screenshot 2023-12-19 at 21 15 24" src="https://github.com/mr-lington/auto-discovery2/assets/99319094/f0afcc9b-03db-4517-a483-995336e95203"><br>
+<img width="857" alt="Screenshot 2023-12-19 at 21 16 10" src="https://github.com/mr-lington/auto-discovery2/assets/99319094/22eb52dd-d5ce-47f2-a278-3852b3b1ae91"><br>
+<img width="865" alt="Screenshot 2023-12-19 at 21 16 44" src="https://github.com/mr-lington/auto-discovery2/assets/99319094/36cff2d0-7896-488e-896d-e717a29ab561"><br>
+
+Newrelic UGI showing 7(host) indicate the number of applications insfracture we are monitoring<br>
+<img width="865" alt="Screenshot 2023-12-19 at 21 18 01" src="https://github.com/mr-lington/auto-discovery2/assets/99319094/bbdac336-d289-4cca-a920-7d58c80f5c84"><br>
+
+Dash board showing the performance of ansible from the metric<br>
+<img width="878" alt="Screenshot 2023-12-19 at 21 19 00" src="https://github.com/mr-lington/auto-discovery2/assets/99319094/3cf45f66-ec53-4a6b-8c21-0ed391ddeaf7"><br>
+
+Below displacing all the directories in our ansible /etc/ansible<br>
+
+The inventory host file of prod-host showing all the ips in the inventory<br>
+<img width="879" alt="Screenshot 2023-12-19 at 21 23 33" src="https://github.com/mr-lington/auto-discovery2/assets/99319094/866b703b-062a-4f43-b2b7-dc6cae4a53e4"><br>
+
+The list of prod Ip's created from asg<br>
+<img width="852" alt="Screenshot 2023-12-19 at 21 25 02" src="https://github.com/mr-lington/auto-discovery2/assets/99319094/edadb1dc-d087-4c86-ba71-4ea50cf10d3c"><br>
+
+The inventory host file of stage-host showing all the ips in the inventory<br>
+<img width="866" alt="Screenshot 2023-12-19 at 21 27 38" src="https://github.com/mr-lington/auto-discovery2/assets/99319094/dc6c1a3d-7d28-48bc-b8fd-fc124e77426a"><br>
+
+The list of stage Ip’s created from asg<br>
+<img width="862" alt="Screenshot 2023-12-19 at 21 28 43" src="https://github.com/mr-lington/auto-discovery2/assets/99319094/96b5b1f5-9d34-4556-8e2d-a6ab252203bb"><br>
+
+Checking docker container from ASG Instance<br>
+Sudo docker ps<br>
+<img width="873" alt="Screenshot 2023-12-19 at 21 29 43" src="https://github.com/mr-lington/auto-discovery2/assets/99319094/377976de-ab26-4376-83cc-bc9dd0dc777f"><br>
+
+Sudo docker ps<br>
+<img width="860" alt="Screenshot 2023-12-19 at 21 30 50" src="https://github.com/mr-lington/auto-discovery2/assets/99319094/5f871f17-ddfb-4d88-881d-950b34ae63e2"><br>
+
+AWS console showing the list of running servers<br>
+<img width="892" alt="Screenshot 2023-12-19 at 21 31 40" src="https://github.com/mr-lington/auto-discovery2/assets/99319094/688ee647-2a6a-4cf4-94cf-c066474000af"><br>
+
+AWS console showing the production and stage asg<br>
+<img width="847" alt="Screenshot 2023-12-19 at 21 32 33" src="https://github.com/mr-lington/auto-discovery2/assets/99319094/dc89c3b4-69ac-4d72-8dd8-88b867bdf25a"><br>
+
+[there is my linkedin profile if you want the read me file ](https://www.linkedin.com/in/darlingtonimade)
+
+
+
+
+
+
+
+
+
 
 
 
