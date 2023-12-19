@@ -115,7 +115,36 @@ Note: you can only see your image after you have built and push to the repo<br>
 4. Go to SECURITY and the REALMS, click on DOCKER BEARER TOKEN REALM and click on the Botton next to it to move it to active on right hand panel and the SAVE<br>
 
 <img width="721" alt="Screenshot 2023-12-19 at 04 48 46" src="https://github.com/mr-lington/auto-discovery2/assets/99319094/ff3e2d96-47e9-4140-86ba-d83194fcde26"><br>
-## Setting up Jenkins
+## Setting up Jenkins<br>
+1. Set username and password for jenkins<br>
+2. shh into jenkis server and cat the administrative password before you set username and password<br>
+<img width="584" alt="Screenshot 2023-12-19 at 19 46 00" src="https://github.com/mr-lington/auto-discovery2/assets/99319094/89af885d-ac2a-48c9-a39a-8198c9a131fe"><br>
+<img width="606" alt="Screenshot 2023-12-19 at 19 49 29" src="https://github.com/mr-lington/auto-discovery2/assets/99319094/74e25581-d875-40d1-978b-a7da81d19c4a"><br>
+
+3. Install suggested plugin, install all the necessary plugins, install SLACK, SSH AGENT, MAVEN INTEGRATION and SONARQUBE SCANNER<br>
+
+<img width="667" alt="Screenshot 2023-12-19 at 19 51 02" src="https://github.com/mr-lington/auto-discovery2/assets/99319094/e08b3415-5b60-431b-93ee-ce94c5a1037b"><br>
+<img width="674" alt="Screenshot 2023-12-19 at 19 51 31" src="https://github.com/mr-lington/auto-discovery2/assets/99319094/5fc33c8d-1663-46f2-9252-69aab2d925a4"><br>
+
+4. configure the credentials, click on manage jenkins, click on credentials and follow the screenshoots below to configure the credentials for all the techstacks that will integrate with jenkins<br>
+<img width="621" alt="Screenshot 2023-12-19 at 19 55 11" src="https://github.com/mr-lington/auto-discovery2/assets/99319094/9173828a-63d9-45e9-96be-2dfe343671da"><br>
+
+<img width="651" alt="Screenshot 2023-12-19 at 19 56 03" src="https://github.com/mr-lington/auto-discovery2/assets/99319094/d8055f11-5bba-474d-a3af-00d46fa3dd8f"><br>
+<img width="634" alt="Screenshot 2023-12-19 at 19 56 45" src="https://github.com/mr-lington/auto-discovery2/assets/99319094/6d34dcbb-1b06-4d90-9ce1-62f2dc284994"><br>
+<img width="625" alt="Screenshot 2023-12-19 at 19 58 12" src="https://github.com/mr-lington/auto-discovery2/assets/99319094/c7b2a2ab-3efe-429a-a293-07d696604ac4"><br>
+5. Configure tools, tools are what you install in jenkins that will integrate with jenkins<br> click on manage jenkins, click on tools<br>
+
+
+<img width="649" alt="Screenshot 2023-12-19 at 20 04 24" src="https://github.com/mr-lington/auto-discovery2/assets/99319094/35017cd2-d219-46f5-9b42-86cfa4b32b18"><br>
+
+<img width="581" alt="Screenshot 2023-12-19 at 20 05 40" src="https://github.com/mr-lington/auto-discovery2/assets/99319094/caa8419c-bee2-4ca5-905a-fb2fc50ec1e2"><br>
+### SYSTEM Configuration<br>
+This is where we configure the servers that will connect with jenkins,slack and sonarqube was configured<br>
+
+
+<img width="595" alt="Screenshot 2023-12-19 at 20 08 23" src="https://github.com/mr-lington/auto-discovery2/assets/99319094/2618d6f8-573e-468e-b3c9-6f3183859628"><br>
+
+
 
 
 
